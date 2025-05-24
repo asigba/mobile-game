@@ -4,6 +4,8 @@ public class PlayerController : MonoBehaviour
 {
     private bool isDragging = false;
     private Vector3 offset;
+    public string targetTag = "";
+
 
     void Update()
     {
@@ -56,23 +58,10 @@ public class PlayerController : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("goal"))
+        if (other.CompareTag(targetTag))
         {
-
-
-            Vector2 playerCenter = new Vector2(transform.position.x, transform.position.y);
-            Vector2 goalCenter = new Vector2(other.transform.position.x, other.transform.position.y);
-
-            float goalRadius = other.GetComponent<CircleCollider2D>().bounds.extents.x;
-            float snapThreshold = goalRadius * 0.5f; // 10% of goal's radius
-
-            float distance = Vector2.Distance(playerCenter, goalCenter);
-            
-            if (distance <= snapThreshold)
-            {
-                transform.position = other.transform.position;
-                isDragging = false;
-            }
+            transform.position = other.transform.position;
+            isDragging = false;
             
             Debug.Log("Touched");
         }
