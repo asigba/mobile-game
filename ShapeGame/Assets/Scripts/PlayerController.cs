@@ -2,10 +2,23 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    private bool isDragging = false;
+    public bool isDragging = false;
     private Vector3 offset;
     public string targetTag = "";
+    private Collider2D dragCollider;
+    private Collider2D triggerColliders;
 
+
+    void Start()
+    {
+        Collider2D[] colliders = GetComponents<Collider2D>();
+
+        foreach (var col in colliders)
+        {
+            if (col.isTrigger) triggerColliders = col;
+            else dragCollider = col;
+        }
+    }
 
     void Update()
     {
@@ -18,7 +31,7 @@ public class PlayerController : MonoBehaviour
             switch (touch.phase)
             {
                 case TouchPhase.Began:
-                    if (GetComponent<Collider2D>() == Physics2D.OverlapPoint(touchPos))
+                    if (dragCollider == Physics2D.OverlapPoint(touchPos))
                     {
                         isDragging = true;
                         offset = transform.position - touchPos;
@@ -38,7 +51,7 @@ public class PlayerController : MonoBehaviour
         {
             Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             mousePos.z = 0;
-            if (GetComponent<Collider2D>() == Physics2D.OverlapPoint(mousePos))
+            if (dragCollider == Physics2D.OverlapPoint(mousePos))
             {
                 isDragging = true;
                 offset = transform.position - mousePos;
@@ -53,17 +66,6 @@ public class PlayerController : MonoBehaviour
         else if (Input.GetMouseButtonUp(0))
         {
             isDragging = false;
-        }
-    }
-
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.CompareTag(targetTag))
-        {
-            transform.position = other.transform.position;
-            isDragging = false;
-            
-            Debug.Log("Touched");
         }
     }
 }

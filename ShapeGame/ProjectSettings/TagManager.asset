@@ -4,7 +4,9 @@
 TagManager:
   serializedVersion: 3
   tags:
-  - goal
+  - circle
+  - square
+  - triangle
   layers:
   - Default
   - TransparentFX
