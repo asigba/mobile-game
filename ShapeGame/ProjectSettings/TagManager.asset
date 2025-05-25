@@ -7,6 +7,11 @@ TagManager:
   - circle
   - square
   - triangle
+  - star
+  - moon
+  - oval
+  - rectangle
+  - heart
   layers:
   - Default
   - TransparentFX

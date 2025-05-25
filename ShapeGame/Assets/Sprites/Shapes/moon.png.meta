@@ -142,13 +142,13 @@ TextureImporter:
       name: moon_0
       rect:
         serializedVersion: 2
-        x: 54
-        y: 4
-        width: 219
-        height: 267
+        x: 19
+        y: 0
+        width: 239
+        height: 257
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 16, w: 0}
       customData: 
       outline: []
       physicsShape: []
@@ -164,7 +164,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5afdb8e2ea6317f4f8e2dc318da03dc9
     internalID: 0
     vertices: []
     indices: 
@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      moon_0: 9083969447635318612
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

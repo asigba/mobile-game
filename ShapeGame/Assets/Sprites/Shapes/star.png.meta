@@ -142,10 +142,10 @@ TextureImporter:
       name: star_0
       rect:
         serializedVersion: 2
-        x: 20
-        y: 4
-        width: 272
-        height: 270
+        x: 0
+        y: 0
+        width: 258
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
