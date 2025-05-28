@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.Playables;
 
@@ -7,11 +8,10 @@ public class Goal : MonoBehaviour
     public string targetTag = "";
 
     void OnTriggerEnter2D(Collider2D other)
-    {
-        TypeIdentifier myType = GetComponent<TypeIdentifier>();
-        TypeIdentifier otherType = other.GetComponent<TypeIdentifier>();
+    {       
+        TypeIdentifier otherType = other.GetComponent<TypeIdentifier>();       
 
-        if (myType != null && otherType != null && otherType.type == targetTag)
+        if (otherType.type == targetTag)
         {
             other.transform.position = transform.position;
 
