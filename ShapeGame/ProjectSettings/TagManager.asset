@@ -4,14 +4,16 @@
 TagManager:
   serializedVersion: 3
   tags:
-  - circle
+  - redcrescent
+  - yellowcircle
+  - redcircle
+  - redheart
+  - yellowheart
+  - greenheart
+  - bluecrescent
+  - greencrescent
+  - yellowcrescent
   - square
-  - triangle
-  - star
-  - moon
-  - oval
-  - rectangle
-  - heart
   layers:
   - Default
   - TransparentFX

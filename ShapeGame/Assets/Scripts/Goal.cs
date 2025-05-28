@@ -8,7 +8,10 @@ public class Goal : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag(targetTag))
+        TypeIdentifier myType = GetComponent<TypeIdentifier>();
+        TypeIdentifier otherType = other.GetComponent<TypeIdentifier>();
+
+        if (myType != null && otherType != null && otherType.type == targetTag)
         {
             other.transform.position = transform.position;
 
@@ -17,8 +20,8 @@ public class Goal : MonoBehaviour
             {
                 pl.isDragging = false;
 
-                // StartCoroutine(RespawnAfterDelay(other.gameObject, 2f));
-                // StartCoroutine(RespawnAfterDelay(gameObject, 2f));
+                StartCoroutine(RespawnAfterDelay(other.gameObject, 2.5f));
+                StartCoroutine(RespawnAfterDelay(gameObject, 2.5f));
 
                 StartCoroutine(GetComponent<Voicelines>().PlayVoiceline());
             }
