@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 1431613242269887639}
   - component: {fileID: 8107039908486634576}
   - component: {fileID: 7357398602014374412}
-  - component: {fileID: 6887671694029622039}
   - component: {fileID: 9175815154398333816}
   m_Layer: 0
   m_Name: Circle_goal
@@ -154,6 +153,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d89e984e122d2a340be6206bff6179ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerSpawner: {fileID: 0}
 --- !u!114 &7357398602014374412
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -167,25 +167,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   voicelines:
-  - {fileID: 8300000, guid: fc3b5ecb874934f48acd9b8796600136, type: 3}
+  - {fileID: 8300000, guid: 6cd075dec1338c449b4b8b09aa1d01ee, type: 3}
   - {fileID: 8300000, guid: 5f6827d6d0e092b44931963838d1caf4, type: 3}
   - {fileID: 8300000, guid: a2406934c8e29964b9131bc024985420, type: 3}
   - {fileID: 8300000, guid: 14964145451fbdb489e2869f6ec1b572, type: 3}
   - {fileID: 8300000, guid: 08348933ffc18a54a9519c975be33dae, type: 3}
   - {fileID: 8300000, guid: cc986f3b17bd3164fa7dd37556cae144, type: 3}
---- !u!114 &6887671694029622039
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 71560874507408463}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7cff87623d1d7cb4da55a7baf2405ce3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  voicelines: []
 --- !u!82 &9175815154398333816
 AudioSource:
   m_ObjectHideFlags: 0

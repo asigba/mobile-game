@@ -22,6 +22,7 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        // Touchscreen on iOS
         if (Input.touchCount > 0)
         {
             Touch touch = Input.GetTouch(0);
@@ -35,6 +36,7 @@ public class PlayerController : MonoBehaviour
                     {
                         isDragging = true;
                         offset = transform.position - touchPos;
+                        StartCoroutine(GetComponent<Voicelines>().PlayVoiceline());
                     }
                     break;
                 case TouchPhase.Moved:
@@ -46,7 +48,8 @@ public class PlayerController : MonoBehaviour
                     break;
             }
         }
-
+        
+        // Mouse
         if (Input.GetMouseButtonDown(0))
         {
             Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -55,6 +58,7 @@ public class PlayerController : MonoBehaviour
             {
                 isDragging = true;
                 offset = transform.position - mousePos;
+                StartCoroutine(GetComponent<Voicelines>().PlayVoiceline());
             }
         }
         else if (Input.GetMouseButton(0) && isDragging)

@@ -16,8 +16,11 @@ public class Voicelines : MonoBehaviour
         {
             int idx = Random.Range(1, voicelines.Length);
             audioSource.PlayOneShot(voicelines[0]);
-            yield return new WaitForSeconds(1f);
-            audioSource.PlayOneShot(voicelines[idx]);
+            if (voicelines.Length > 1)
+            {
+                yield return new WaitForSeconds(1f);
+                audioSource.PlayOneShot(voicelines[idx]);
+            }
         }
     }
 }

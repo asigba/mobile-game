@@ -154,6 +154,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d89e984e122d2a340be6206bff6179ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerSpawner: {fileID: 0}
 --- !u!114 &3252544603476528574
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -167,7 +168,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   voicelines:
-  - {fileID: 8300000, guid: fc3b5ecb874934f48acd9b8796600136, type: 3}
+  - {fileID: 8300000, guid: 6cd075dec1338c449b4b8b09aa1d01ee, type: 3}
   - {fileID: 8300000, guid: 08348933ffc18a54a9519c975be33dae, type: 3}
   - {fileID: 8300000, guid: a2406934c8e29964b9131bc024985420, type: 3}
   - {fileID: 8300000, guid: 14964145451fbdb489e2869f6ec1b572, type: 3}

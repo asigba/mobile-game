@@ -7,7 +7,7 @@ public class Goal : MonoBehaviour
 {
     public string targetTag = "";
 
-    void OnTriggerEnter2D(Collider2D other)
+    private System.Collections.IEnumerator OnTriggerEnter2D(Collider2D other)
     {       
         TypeIdentifier otherType = other.GetComponent<TypeIdentifier>();       
 
@@ -20,28 +20,31 @@ public class Goal : MonoBehaviour
             {
                 pl.isDragging = false;
 
-                StartCoroutine(RespawnAfterDelay(other.gameObject, 2.5f));
-                StartCoroutine(RespawnAfterDelay(gameObject, 2.5f));
+                // StartCoroutine(RespawnAfterDelay(other.gameObject, 2.5f));
+                // StartCoroutine(RespawnAfterDelay(gameObject, 2.5f));
 
                 StartCoroutine(GetComponent<Voicelines>().PlayVoiceline());
+
+                yield return new WaitForSeconds(5f);
+
+                Destroy(other.gameObject);
+                Destroy(gameObject);
             }
 
         }
     }
 
-    private System.Collections.IEnumerator RespawnAfterDelay(GameObject obj, float delay)
-    {
-        yield return new WaitForSeconds(delay);
-        obj.SetActive(false);
+    // private System.Collections.IEnumerator RespawnAfterDelay(GameObject obj, float delay)
+    // {
+    //     yield return new WaitForSeconds(delay);
+    //     obj.SetActive(false);
+    //     gameObject.SetActive(false);       
 
-        Respawnable respawnObj = obj.GetComponent<Respawnable>();
-        Respawnable respawnthis = gameObject.GetComponent<Respawnable>();
-        if (respawnObj != null) respawnObj.Respawn();
-        if (respawnthis != null) respawnthis.Respawn();
-        obj.SetActive(true);
-        gameObject.SetActive(true);
-
-
-
-    }
+    //     Respawnable respawnObj = obj.GetComponent<Respawnable>();
+    //     Respawnable respawnthis = gameObject.GetComponent<Respawnable>();
+    //     Destroy(obj);
+    //     Destroy(gameObject);
+    //     if (respawnObj != null) respawnObj.Respawn();
+    //     if (respawnthis != null) respawnthis.Respawn();
+    // }
 }

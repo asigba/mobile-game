@@ -2,15 +2,15 @@ using UnityEngine;
 
 public class Respawnable : MonoBehaviour
 {
-    private Vector3 respawnPosition;
+    
+    private float spawnRadius = 1f;
+    private int maxAttempts = 20;
 
-    void Start()
-    {
-        respawnPosition = transform.position;
-    }
-
+    public PlayerSpawner playerSpawner;
+    
     public void Respawn()
     {
-        transform.position = respawnPosition;
+        // playerSpawner.SpawnRandomPlayer(transform.position);
+        // return;     
     }
 }
