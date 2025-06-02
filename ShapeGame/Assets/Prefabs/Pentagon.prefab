@@ -389,3 +389,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   voicelines:
   - {fileID: 8300000, guid: fc3b5ecb874934f48acd9b8796600136, type: 3}
+  - {fileID: 8300000, guid: e2cb545eda73fe3478ab692756f26702, type: 3}
+  - {fileID: 8300000, guid: f7c3c414f62ca0e449a4cc314e8a02cb, type: 3}

@@ -253,10 +253,17 @@ MonoBehaviour:
   voicelines:
   - {fileID: 8300000, guid: 6cd075dec1338c449b4b8b09aa1d01ee, type: 3}
   - {fileID: 8300000, guid: 08348933ffc18a54a9519c975be33dae, type: 3}
+  - {fileID: 8300000, guid: bfa213525709d4646b597e45cfd5675a, type: 3}
   - {fileID: 8300000, guid: a2406934c8e29964b9131bc024985420, type: 3}
   - {fileID: 8300000, guid: 14964145451fbdb489e2869f6ec1b572, type: 3}
+  - {fileID: 8300000, guid: 166eb3bae8f9e4e4489e6cb4b9993a40, type: 3}
+  - {fileID: 8300000, guid: f165b01887e3d3e40b976835668097bb, type: 3}
   - {fileID: 8300000, guid: cc986f3b17bd3164fa7dd37556cae144, type: 3}
   - {fileID: 8300000, guid: 5f6827d6d0e092b44931963838d1caf4, type: 3}
+  - {fileID: 8300000, guid: 6b803749c3c361140b73783cabff74f4, type: 3}
+  - {fileID: 8300000, guid: 1d5082105c5cec546b1895ab2b3fcc52, type: 3}
+  - {fileID: 8300000, guid: 8d086daf6932f734798f34a593d0390e, type: 3}
+  - {fileID: 8300000, guid: b294b59fe932f31478a409aa0ee4e03c, type: 3}
 --- !u!114 &3466355662039052488
 MonoBehaviour:
   m_ObjectHideFlags: 0
